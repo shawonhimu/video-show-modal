@@ -9,46 +9,31 @@
 </head>
 <body>
 
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalid">Pop Up Your Video</button>
+    <div class="popup">
+        <div class="text-center">
+            <h2>Hey, Click the below button to open the Modal</h2>
+            <br>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalid">Pop Up Your Video</button>
+        </div>
 
-
-
-    <div class="modal fade" tabindex="-1" id="modalid">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal fade" tabindex="-1" id="modalid">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
                 </div>
-                <div class="modal-body">
-                    <iframe title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                
             </div>
         </div>
     </div>
 
+   
+    <script src="./js/script.js"></script>
 
-
-
-    <div ></div>
-
-    <script>
-        var youTubeVideoID='QZnVRvTJzcU';
-
-        var youTubeURL="https://www.youtube.com/embed/"+youTubeVideoID;
-
-        var videoModal = document.querySelector('#modalid');
-        var iframeModal = document.querySelector('iframe');
-        videoModal.addEventListener('hide.bs.modal', function () {
-            iframeModal.setAttribute('src','');
-        })
-        videoModal.addEventListener('show.bs.modal', function () {
-            iframeModal.setAttribute('src', youTubeURL);
-        })
-        
-      
-    </script>
-    
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/popper.min.js"></script>
 </body>
