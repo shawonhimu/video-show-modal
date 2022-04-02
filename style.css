@@ -1,0 +1,20 @@
+iframe{
+    width: 100%;
+    height: 425px;
+}
+
+.modal-dialog {
+    max-width: 650px;
+}
+
+.modal-header {
+    border: none;
+}
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.modal-body{
+    padding: 0;
+}
